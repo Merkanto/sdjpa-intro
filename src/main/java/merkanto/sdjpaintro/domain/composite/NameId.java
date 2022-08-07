@@ -1,7 +1,10 @@
 package merkanto.sdjpaintro.domain.composite;
 
+import jakarta.persistence.Embeddable;
+
 import java.io.Serializable;
 
+@Embeddable
 public class NameId implements Serializable {
     private String firstName;
     private String lastName;

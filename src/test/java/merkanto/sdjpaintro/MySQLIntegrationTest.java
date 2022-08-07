@@ -19,6 +19,8 @@ public class MySQLIntegrationTest {
     @Autowired
     BookRepository bookRepository;
 
+
+
     @Test
     void testMySQL() {
         long countBefore = bookRepository.count();

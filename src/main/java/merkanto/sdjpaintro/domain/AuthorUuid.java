@@ -1,17 +1,15 @@
 package merkanto.sdjpaintro.domain;
 
-import org.hibernate.annotations.Type;
-
 import jakarta.persistence.*;
+
 import java.util.UUID;
 
 @Entity
 public class AuthorUuid {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Type(type = "org.hibernate.type.UUIDCharType")
-    @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
+//    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false )
     private UUID id;
 
     private String firstName;

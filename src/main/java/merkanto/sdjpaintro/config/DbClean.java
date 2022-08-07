@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
 public class DbClean {
 
     @Bean
-    public FlywayMigrationStrategy clean() {
+    public FlywayMigrationStrategy clean(){
         return flyway -> {
             flyway.clean();
             flyway.migrate();

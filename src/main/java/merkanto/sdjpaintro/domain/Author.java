@@ -5,11 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.util.Objects;
-
 @Entity
 public class Author {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -48,7 +45,7 @@ public class Author {
 
         Author author = (Author) o;
 
-        return Objects.equals(id, author.id);
+        return id != null ? id.equals(author.id) : author.id == null;
     }
 
     @Override
